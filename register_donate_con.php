@@ -37,13 +37,13 @@
           <div class="alert alert-primary" role="alert">
             <button type="button" class="close" data-dismiss="alert">×</button>
             <h4 class="alert-heading">Muito Bem!</h4>
-            <p class="mb-0">O seu cadastro foi concluido com sucesso, você está fazendo o dia de alguém ser mais feliz!!! </p>
+            <p class="mb-0">O seu cadastro foi concluído com sucesso, você está fazendo o dia de alguém ser mais feliz!!! </p>
 		<p class="mb-0">Seu comprovante é o de número: <?php
                         while ($lista = $conect->Listar($query)) {
                             echo "<th>" . $lista['maxId'] . "</th>";
                         }
                     ?>	</p>
-		
+		<p class="mb-0">Iremos recolher a sua doação, efetivar sua generosidade e figurar seu nome na lista de doadores!!! </p>
 		<a class="btn btn-outline-secondary my-2" href="index.php">Voltar pra Home</a>
           </div>
         </div>
