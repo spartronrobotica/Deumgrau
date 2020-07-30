@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="assets/theme.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-primary" id="top_page">
+      <div class="container"> <a href="index.php"><img src="assets/imgs/logosemAm.png" width="100px" style=""></a>
+      <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar10">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar10">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"> <a class="nav-link" href="index.php"><font color="black">Home</font></a> </li>
+          <li class="nav-item"> <a class="nav-link" href="index.php#quem_somos"><font color="black">Quem Somos</font></a> </li>
+          <li class="nav-item"> <a class="nav-link" href="index.php#como_funciona"><font color="black">Sobre</font></a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="py-5 text-center" style="">
+    <div class="container">
+      <div class="row">
+        <div class="mx-auto col-lg-6 col-10">
+          <h1 class="text-uppercase">Cadastro Receptor</h1>
+          <p class="mb-3 text-uppercase">cadastre-se no nosso site, e transforme o seu dia.</p>
+          <form class="text-left" action="recebe_receptor.php" method="POST">
+            <div class="form-group"> <label>Seu nome completo</label> <input type="text" class="form-control" placeholder="Ex: João Pedro Silva de Souza" required="required" name="name"></div>
+            <div class="form-group"> <label>Data de Nascimento</label> <input type="date" class="form-control" required="required" name="data_de_nascimento"> </div>
+            <div class="form-group"> <label>NIS</label> <input type="number" class="form-control" placeholder="Apenas os numeros" required="required" name="nis"> </div>
+            <div class="form-group"> <label>RG</label> <input type="number" class="form-control" placeholder="Apenas os numeros" required="required" name="rg"> </div>
+            <div class="form-group"> <label>CPF</label> <input type="number" class="form-control" placeholder="Apenas os numeros" required="required" name="cpf"> </div>
+            <div class="form-group"> <label>Telefone</label> <input type="number" class="form-control" placeholder="Ex: 63 91234-9876" required="required" name="telefone"> </div>
+            <div class="form-group"> <label>Endereço</label> <input type="text" class="form-control" placeholder="Ex: Rua 00 Qd 00" required="required" name="endereco"> </div>
+            <div class="form-group"> <label>Bairro</label> <input type="text" class="form-control" placeholder="Ex: Jardim Querido" required="required" name="bairro"> </div>
+            <div class="form-group"> <label>Municipio</label>
+              <div><select name="municipio" required="required">
+                  <option></option>
+                  <option value="Porto Nacional">Porto Nacional</option>
+                  <option value="Gurupi">Gurupi</option>
+                  <option value="Lusimangues">Lusimangues</option>
+                  <option value="Palmas">Palmas</option>
+                </select></div>
+            </div>
+            <hr>
+            <div class="form-group"> <label>Recebe algum auxilio social?</label>
+              <div>
+                <input type="radio" name="auxilio" required="required" value="Sim"><label>Sim</label>
+                <input type="radio" name="auxilio" value="Não"><label>Não</label>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-5"> <label>Qual?</label> <input type="text" class="form-control" name="qual_auxilio" placeholder="Ex: Bolsa Familia"> </div>
+              <div class="form-group col-md-4"> <label>Valor</label> <input type="number" class="form-control" name="valor_auxilio"> </div>
+            </div>
+            <hr>
+            <div class="form-group"> <label>Recebeu auxilio emergencial?</label>
+              <div>
+                <input type="radio" name="auxilio_eme" required="required" value="Sim"><label>Sim</label>
+                <input type="radio" name="auxilio_eme" value="Não"><label>Não</label>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-5"> <label>Valor</label> <input type="number" class="form-control" name="valor_auxilio_eme"> </div>
+            </div>
+            <hr>
+            <div class="form-group"> <label>Localização</label>
+              <div>
+                <input type="radio" name="localizacao" required="required" value="Urbano"><label>Urbano</label>
+                <input type="radio" name="localizacao" value="Rural"><label>Rural</label>
+              </div>
+            </div>
+            <hr>
+            <div class="form-group"> <label>No momento, sua familia está passando por insegurança alimentar, devido á situação de Pandemia que estamos vivendo?</label>
+              <div>
+                <input type="radio" name="inseguro" required="required" value="Sim"><label>Sim</label>
+                <input type="radio" name="inseguro" value="Não"><label>Não</label>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-md-4" style="">
+                <div class="list-group mb-1">
+                  <a class="list-group-item list-group-item-action active align-items-center"> Eletronicos</a>
+                  <a class="list-group-item list-group-item-action"><input type="radio" name="item" value="Celular"> Celular</a>
+                  <a class="list-group-item list-group-item-action"><input type="radio" name="item" value="Computador"> Computador</a>
+                  <a class="list-group-item list-group-item-action"><input type="radio" name="item" value="Tablet"> Tablet</a>
+                </div>
+              </div>
+              <div class="col-md-4" style="">
+                <div class="list-group mb-1">
+                  <a class="list-group-item list-group-item-action active align-items-center"> Vestimentas</a>
+                  <a class="list-group-item list-group-item-action"><input type="radio" name="item" value="Camisa"> Camisa</a>
+                  <a class="list-group-item list-group-item-action"><input type="radio" name="item" value="Calça"> Calça</a>
+                  <a class="list-group-item list-group-item-action"><input type="radio" name="item" value="Tênis"> Tênis</a>
+                </div>
+              </div>
+              <div class="col-md-4" style="">
+                <div class="list-group mb-1">
+                  <a class="list-group-item list-group-item-action active align-items-center" contenteditable="true"> Alimentos</a>
+                  <a class="list-group-item list-group-item-action"><input type="radio" name="item" value="Arroz"> Arroz</a>
+                  <a class="list-group-item list-group-item-action"><input type="radio" name="item" value="CeluFeijãolar"> Feijão</a>
+                  <a class="list-group-item list-group-item-action"><input type="radio" name="item" value="Não Perecivel"> Não Perecivel</a>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="form-group">
+              <div class="form-group"> <label for="tel_register">Descrição de o porque você precisa desse item</label> <input type="text" class="form-control form-control-sm" required="required" name="descricao" placeholder="Situação atual, motivo, necessidade..."></div>
+            </div><button type="submit" class="btn btn-block btn-primary">Fazer Pedido</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

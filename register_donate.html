@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="assets/theme.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-primary" id="top_page">
+      <div class="container"> <a href="index.php"><img src="assets/imgs/logosemAm.png" width="100px" style=""></a>
+      <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar10">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar10">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"> <a class="nav-link" href="index.php"><font color="black">Home</font></a> </li>
+          <li class="nav-item"> <a class="nav-link" href="index.php#quem_somos"><font color="black">Quem Somos</font></a> </li>
+          <li class="nav-item"> <a class="nav-link" href="index.php#como_funciona"><font color="black">Sobre</font></a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="py-5 text-center">
+    <div class="container">
+      <div class="row">
+        <div class="mx-auto col-lg-6 col-10" style="">
+          <h1 class="text-uppercase">&nbsp;cadastro doador</h1>
+          <p class="mb-3 text-uppercase">cadastre-se no nosso site, e transforme o dia de alguém.</p>
+          <form class="text-left" action="recebe_donate.php" method="POST">
+            <div class="form-group"> <label>Seu nome completo</label> <input type="text" class="form-control" id="name_register" placeholder="Ex: João Pedro Silva de Souza" required="required" name="name_donate"> </div>
+            <div class="form-group"> <label>Você quer ser anônimo? Se sim, seu nome não sera listado na Pagina Inicial</label>
+              <div>
+                <input type="radio" name="anonimo" required="required" value="Sim"><label>Sim</label>
+                <input type="radio" name="anonimo" value="Não"><label>Não</label>
+              </div>
+            </div>
+            <div class="form-group"> <label>CPF</label> <input type="number" class="form-control" id="cpf_register" placeholder="Apenas os numeros" required="required" name="cpf_donate"> </div>
+            <div class="form-group"> <label>Telefone</label> <input type="number" class="form-control" id="tel_register" placeholder="Ex: 63 91234-9876" required="required" name="telefone_donate"> </div>
+            <div class="form-group"> <label>Endereço de coleta</label> <input type="text" class="form-control" id="endereco_register" placeholder="Ex: Rua 00 Qd 00" required="required" name="endereco_donate"> </div>
+            <div class="form-group"> <label>Bairro</label> <input type="text" class="form-control" id="bairro_register" placeholder="Ex: Jardim Querido" required="required" name="bairro_donate"> </div>
+            <div class="form-group"> <label>Municipio</label>
+              <div>
+                <select name="municipio_donate" id="municipio_register" required="required">
+                  <option></option>
+                  <option value="Porto Nacional">Porto Nacional</option>
+                  <option value="Gurupi">Gurupi</option>
+                  <option value="Lusimangues">Lusimangues</option>
+                  <option value="Palmas">Palmas</option>
+                </select>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-md-4" style="">
+                <div class="list-group mb-1">
+                  <a class="list-group-item list-group-item-action active align-items-center"> Eletronicos</a>
+                  <a class="list-group-item list-group-item-action"><input type="radio" name="item_donate" value="Celular"> Celular</a>
+                  <a class="list-group-item list-group-item-action"><input type="radio" name="item_donate" value="Computador"> Computador</a>
+                  <a class="list-group-item list-group-item-action"><input type="radio" name="item_donate" value="Tablet"> Tablet</a>
+                </div>
+              </div>
+              <div class="col-md-4" style="">
+                <div class="list-group mb-1">
+                  <a class="list-group-item list-group-item-action active align-items-center"> Vestimentas</a>
+                  <a class="list-group-item list-group-item-action"><input type="radio" name="item_donate" value="Camisa"> Camisa</a>
+                  <a class="list-group-item list-group-item-action"><input type="radio" name="item_donate" value="Calça"> Calça</a>
+                  <a class="list-group-item list-group-item-action"><input type="radio" name="item_donate" value="Tênis"> Tênis</a>
+                </div>
+              </div>
+              <div class="col-md-4" style="">
+                <div class="list-group mb-1">
+                  <a class="list-group-item list-group-item-action active align-items-center" contenteditable="true"> Alimentos</a>
+                  <a class="list-group-item list-group-item-action"><input type="radio" name="item_donate" value="Arroz"> Arroz</a>
+                  <a class="list-group-item list-group-item-action"><input type="radio" name="item_donate" value="Feijão"> Feijão</a>
+                  <a class="list-group-item list-group-item-action"><input type="radio" name="item_donate" value="Não Perecivel"> Não Perecivel</a>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="form-group"> <label for="tel_register">Descrição do item doado</label> <input type="text" class="form-control form-control-sm" required="required" name="descricao_donate" placeholder="Estado, detalhes..."></div>
+            <button type="submit" class="btn btn-block btn-primary">Fazer Doação</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
